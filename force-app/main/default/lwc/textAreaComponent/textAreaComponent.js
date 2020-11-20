@@ -8,16 +8,11 @@ export default class TextAreaComponent extends LightningElement {
     textAreaContent;
 
     handleChange(event){
-
         this.textAreaContent = event.target.value;
-        
         const passValueEvent = new CustomEvent('change', {
             detail: { textAreaContent: this.textAreaContent }
         });
-
-        console.log('PK - current val is: ', this.textAreaContent);
         this.dispatchEvent(passValueEvent);
     }
-
 
 }
