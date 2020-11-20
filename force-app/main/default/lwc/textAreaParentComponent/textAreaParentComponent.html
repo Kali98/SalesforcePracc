@@ -1,6 +1,19 @@
 <template>
-    <lightning-card>
-            <p>Value below (parent) is: {textAreaContent}</p>
-            <c-text-area-component rows="10" cols="15" value={textAreaContent} onchange={handleChange}></c-text-area-component>
-    </lightning-card>
-</template>
+    <p>This example creates a simple layout with field headers.</p>
+    <div class="c-container">
+      <lightning-layout>
+        <lightning-layout-item padding="around-small" size="12">
+          <lightning-card>
+            <p>Value below (child) is: {textAreaContent}</p>
+            <c-text-area-component
+              rows="1"
+              label="Input"
+              cols="1"
+              onchange={handleChange}
+            ></c-text-area-component>
+          </lightning-card>
+        </lightning-layout-item>
+      </lightning-layout>
+    </div>
+  </template>
+  

@@ -1,7 +1,7 @@
 import { LightningElement, track} from 'lwc';
 
 export default class TextAreaParentComponent extends LightningElement {
-    @track textAreaContent
+    textAreaContent;
 
 
     handleChange(event){

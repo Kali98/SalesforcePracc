@@ -1,21 +1,21 @@
-import { LightningElement, api, track } from 'lwc';
+import { LightningElement, api } from 'lwc';
 
 export default class TextAreaComponent extends LightningElement {
     @api label;
     @api rows;
     @api cols;
     @api placeholder;
-    @track value;
-    currentValue = '';
+    textAreaContent;
 
     handleChange(event){
-        this.currentValue = event.target.value;
+
+        this.textAreaContent = event.target.value;
         
         const passValueEvent = new CustomEvent('change', {
-            detail: { textAreaContent: this.currentValue }
+            detail: { textAreaContent: this.textAreaContent }
         });
 
-        console.log('PK - current val is: ', this.currentValue);
+        console.log('PK - current val is: ', this.textAreaContent);
         this.dispatchEvent(passValueEvent);
     }
 

@@ -1,16 +1,17 @@
 <template>
-    <div class="slds-form-element slds-form-element_stacked"> 
-        
-        <p>Value from child is: {currentValue}</p>
-        <textarea 
-            rows={rows} 
-            cols={cols}
-            placeholder={placeholder}
-            oninput={handleChange}
-            >       
-            {textAreaContent}
-            TEST_text_from_child
-        </textarea> 
-        
-    </div>
+    <div class="slds-form-element">
+        <label class="slds-form-element__label" for="textarea-id-01">{label}</label>
+        <div class="slds-form-element__control">
+            <textarea 
+                id="textarea-id-01"
+                class="slds-textarea"
+                rows={rows} 
+                cols={cols}
+                placeholder={placeholder}
+                oninput={handleChange}
+                >       
+                {textAreaContent}
+            </textarea> 
+        </div>
+      </div>
 </template>
