@@ -16,6 +16,7 @@ global with sharing class OpportunityREST {
         
         delete desiredAcc;
     }
+    
 
     @HttpPost
     global static void deleteOpps() {
