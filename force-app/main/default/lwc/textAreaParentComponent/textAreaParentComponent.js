@@ -1,12 +1,12 @@
 import { LightningElement, track} from 'lwc';
 
 export default class TextAreaParentComponent extends LightningElement {
-    @track currentValue
+    @track textAreaContent
 
 
     handleChange(event){
-        this.currentValue = event.target.currentValue;
-        console.log('PK - current val is: ', this.currentValue);
+        this.textAreaContent = event.detail.textAreaContent;
+        console.log('PK - textAreaContent is: ', this.textAreaContent);
 
     }
 

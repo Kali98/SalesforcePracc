@@ -1,9 +1,6 @@
 <template>
     <lightning-card>
-        <div class="slds-form-element slds-form-element_stacked">
-            <p>Value below is: {currentValue}</p>
-            <c-text-area-parent-component label="LWC text area" rows="5" cols="5" placeholder="Input Here" onchange={handleChange}></c-text-area-parent-component>
-
-        </div>
+            <p>Value below (parent) is: {textAreaContent}</p>
+            <c-text-area-component rows="10" cols="15" value={textAreaContent} onchange={handleChange}></c-text-area-component>
     </lightning-card>
 </template>
