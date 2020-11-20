@@ -15,7 +15,7 @@ public with sharing class ExternalCallout {
         //     res = new Http().send(req);
             
         // }
-        System.debug('BODY BELOw----------------');
+    
         System.debug(res.getBody());
    
         System.debug(res.getStatusCode());
