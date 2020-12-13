@@ -9,6 +9,7 @@ export default class TextAreaComponent extends LightningElement {
 
     handleChange(event){
         this.textAreaContent = event.target.value;
+        console.log("Byle co");
         const passValueEvent = new CustomEvent('change', {
             detail: { textAreaContent: this.textAreaContent }
         });
