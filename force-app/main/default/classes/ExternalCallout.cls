@@ -16,7 +16,7 @@ public with sharing class ExternalCallout {
             
         // }
     
-        System.debug(res.getBody());
+        System.debug(res.getBody() + 'hiiiiii');
    
         System.debug(res.getStatusCode());
     
