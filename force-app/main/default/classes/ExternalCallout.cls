@@ -7,6 +7,12 @@ public with sharing class ExternalCallout {
 
         Http http = new Http();
         HttpResponse res = http.send(req);
+        // while (res.getStatusCode() == 302){
+        //     req.setEndpoint(res.getHeader('Location')); 
+        //     res = new Http().send(req);
+            
+        // }
+    
 
 
         List<String> debugInfo = new List<String>();
