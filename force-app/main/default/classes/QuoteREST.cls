@@ -4,8 +4,8 @@ global with sharing class QuoteREST {
     global static List<Quote> getAllQuotes() {
 
 
-        System.debug('PAKAL :Test callout');
-        List<Quote> allQuotes = [SELECT Id, Name FROM Quote WHERE CreatedDate = LAST_N_DAYS:8];
+        System.debug('Test callout');
+        List<Quote> allQuotes = [SELECT Id, Name FROM Quote WHERE CreatedDate = LAST_N_DAYS:6];
         
         return allQuotes;
     }
