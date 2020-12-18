@@ -16,9 +16,9 @@ public with sharing class ExternalCallout {
 
 
         List<String> debugInfo = new List<String>();
-        debugInfo.add(req.getBody());
+        debugInfo.add(req.getBody() + 'What is going on');
         debugInfo.add(res.getBody());
-        debugInfo.add(string.valueof(res.getStatusCode()));
+        debugInfo.add('This is going on' + string.valueof(res.getStatusCode()));
 
         return debugInfo;
 
